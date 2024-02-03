@@ -1,7 +1,19 @@
-async function play(e, name) {
+async function play(e,name,dir) {
   createRipple(e);
-  const buffer = await getBuffer("voices/" + name + ".mp3");
-  currentSource = playAudio(buffer);
+  if (dir == undefined){
+    dir = "voices/"
+  }
+  else {
+    dir = "voices/" + dir + "/"
+  }
+  if (name == "stop"){
+    stopAllAudio()
+  }
+  else {
+    const buffer = await getBuffer(dir + name + ".mp3");
+    currentSource = playAudio(buffer);
+  }
+  
 }
 function createRipple(event) {
   const button = event.currentTarget;
