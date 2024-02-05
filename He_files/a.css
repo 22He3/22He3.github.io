@@ -8,11 +8,11 @@ body {
 #head {
   width: 86%;
   height: 250px;
-  max-width: 530px;
+  max-width: 740px;
   background-color: #6f8ebe;
   border-radius: 0 0 10px 10px;
   padding: 15px;
-  margin: 0 0 50px 0;
+  margin: 0 0 75px 0;
   color: whitesmoke;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13), 0 1px 1px 0 rgba(0, 0, 0, 0.11);
 }
@@ -22,7 +22,7 @@ body {
   }
 }
 #cover {
-  max-height: 250px;
+  max-height: 270px;
   overflow: hidden;
   position: relative;
   top: 4px;
@@ -44,16 +44,16 @@ body {
 }
 .body {
   width: 80%;
-  max-width: 510px;
+  max-width: 700px;
   background-color: white;
-  border-radius: 10px;
-  padding: 15px;
+  border-radius: 10px; 
+  padding: 10px;
   margin: 10px 0;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13), 0 1px 1px 0 rgba(0, 0, 0, 0.11);
 }
 .about {
   width: 80%;
-  max-width: 510px;
+  max-width: 700px;
   background-color: white;
   border-radius: 10px;
   padding: 15px;
@@ -68,12 +68,14 @@ body {
   position: relative;
   font-size: 20px;
   font-weight: bold;
+  display: flex;
 }
 p {
-  margin: 8px 0;
+  margin: 3px 0;
 }
 .content {
-  width: 100%;
+  width: 90%;
+  transform: translateX(5%);
 }
 .row {
   display: flex;

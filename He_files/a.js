@@ -14,7 +14,7 @@ async function play(e,name,dir) {
     currentSource = playAudio(buffer);
   }
   
-}
+};
 function createRipple(event) {
   const button = event.currentTarget;
   const circle = document.createElement("div");
@@ -30,8 +30,9 @@ function createRipple(event) {
       document.body.scrollTop +
       event.clientY;
   var wx = button.offsetWidth;
-  x = x - button.offsetLeft - wx / 2;
-  y = y - button.offsetTop - wx / 2;
+  const rect = button.getBoundingClientRect();
+  x = event.clientX - rect.left - wx / 2;
+  y = event.clientY - rect.top - wx / 2;
   circle.style.cssText =
     "width: " +
     wx +

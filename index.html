@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>He音盒</title>
     <meta name="Description" content="He音盒">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./He_files/message.min.css">
     <link rel="stylesheet" href="./He_files/a.css">
     <!--<script src="message.min.js" defer></script>-->
@@ -29,14 +32,23 @@
     </div>
     <div class="body"> <!--木山车-->
       <div style="position: relative;" class="title">
-        <p>木山车<button style=
+        <p>木山车</p>
+        <b data-toggle="collapse" href="#z" style=
+        "font-size:small;
+        color:rgba(0, 0, 0, 0.215);
+        transform: translateY(65%);
+        position: absolute;
+        left: 50%;">点击展开/折叠
+        </b>
+        <button style=
           "height: auto;
-          left: 85%;
+          margin: 3px 0;
+          left: 80%;
           position: absolute;
-          border-radius: 6px;"
-          onclick="play(event,'stop')">暂停</button></p>
+          border-radius: 6px;"onclick="play(event,'stop')">暂停
+        </button>
       </div>
-      <div class="content">
+      <div id="z" class="content collapse m-collapse">
         <div class="row">
           <button style="color:#c9ffe6" onclick="play(event,'Br4','z')">溴の4</button>
           <button onclick="play(event,'Br4全','z')">溴の4小连招</button>
@@ -90,15 +102,24 @@
       </div>
     </div>
     <div class="body"> <!--世说辛语-->
-      <div class="title">
-        <p>世说辛语<button style=
+      <div style="position: relative;" class="title">
+        <p>世说辛语</p>
+        <b data-toggle="collapse" href="#x" style=
+        "font-size:small;
+        color:rgba(0, 0, 0, 0.215);
+        transform: translateY(65%);
+        position: absolute;
+        left: 50%;">点击展开/折叠
+        </b>
+        <button style=
           "height: auto;
-          left: 85%;
+          margin: 3px 0;
+          left: 80%;
           position: absolute;
-          border-radius: 6px;"
-          onclick="play(event,'stop')">暂停</button></p>
+          border-radius: 6px;"onclick="play(event,'stop')">暂停
+        </button>
       </div>
-      <div class="content">
+      <div id="x" class="content collapse">
         <div class="row">
           <button onclick="play(event,'最高指示','x')">最高指示</button>
         </div>
@@ -154,12 +175,19 @@
       <div class="title">
         <p>test(音量注意)<button style=
           "height: auto;
-          left: 85%;
+          left: 80%;
           position: absolute;
           border-radius: 6px;"
           onclick="play(event,'stop')">暂停</button></p>
+          <b data-toggle="collapse" href="#t" style=
+          "font-size:small;
+          color:rgba(0, 0, 0, 0.215);
+          transform: translateY(65%);
+          position: absolute;
+          left: 50%;">点击展开/折叠
+          </b>
       </div>
-      <div class="content">
+      <div id="t" class="content collapse">
         <div class="row">
           <button onclick="play(event,'1')">1</button>
           <button onclick="play(event,'2')">2</button>
@@ -169,25 +197,40 @@
         </div>
       </div>
     </div>
-    <div class="about">
-      <div style="font-size: 20px; font-weight: bold">
+    <div class="about"> <!--关于-->
+      <div style="font-size: 20px; font-weight: bold;display: flex;">
         <p>关于</p>
+        <b data-toggle="collapse" href="#about" style=
+        "font-size:small;
+        color:rgba(0, 0, 0, 0.215);
+        transform: translateY(65%);
+        position: absolute;
+        left: 60%;">点击展开/折叠
+        </b>
       </div>
-      <div class="content">
+      <div id="about" class="content collapse">
         <p>本网站由网友制作的<a href="https://rarebox.page.dev/">罕见盒</a>修改而来，正在编辑中……</p>
       </div>
     </div>
-    <div class="about">
-      <div style="font-size: 20px; font-weight: bold">
+    <div class="about"> <!--更新日志-->
+      <div style="font-size: 20px; font-weight: bold;display: flex;">
         <p>更新历史</p>
+        <b data-toggle="collapse" href="#dev" style=
+        "font-size:small;
+        color:rgba(0, 0, 0, 0.215);
+        transform: translateY(65%);
+        position: absolute;
+        left: 60%;">点击展开/折叠
+        </b>
       </div>
-      <div style="font-size: 14px;color: rgb(128, 128, 128)">
+      <div style="font-size: 14px;color: rgb(128, 128, 128)" id="dev" class="collapse">
           <p>24/1/17&emsp;开始施工</p>
           <p>24/2/1&emsp;&ensp;实现了暂停功能</p>
           <p>24/2/3&emsp;&ensp;更新了“木山车”语音集</p>
           <p>24/2/4&emsp;&ensp;更新了“世说辛语”语音集，改善了页面布局</p>
+          <p>24/2/5&emsp;&ensp;实现了折叠功能，改善了页面布局</p>
       </div>
     </div>
   <!-- Cloudflare pages Analytics --><script defer="" src="./He_files/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;db5b6d0335ff4ce4979a881b2b742d71&quot;}"></script><!-- Cloudflare pages Analytics -->
-
+    <div style="height: 50px;"></div>
 </body></html>
