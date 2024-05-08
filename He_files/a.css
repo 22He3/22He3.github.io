@@ -43,7 +43,7 @@ body {
   color: inherit;
 }
 .body {
-  width: 80%;
+  width: 85%;
   max-width: 700px;
   background-color: white;
   border-radius: 10px; 
@@ -52,7 +52,7 @@ body {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13), 0 1px 1px 0 rgba(0, 0, 0, 0.11);
 }
 .about {
-  width: 80%;
+  width: 85%;
   max-width: 700px;
   background-color: white;
   border-radius: 10px;
@@ -95,6 +95,23 @@ button {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+}
+.body a {
+  color:rgba(0, 0, 0, 0.215);
+  font-size:small;
+  transform: translateY(50%);
+  position: absolute;
+  left: 50%;
+}
+.mbody {
+  width: 100%;
+}
+.stop {
+  height: auto;
+  margin: 3px 0;
+  left: 80%;
+  position: absolute;
+  border-radius: 6px;
 }
 /* 水波纹动画 */
 .ripple {

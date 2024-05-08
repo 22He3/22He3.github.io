@@ -1,6 +1,5 @@
 <!DOCTYpE html>
 <html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>He音盒</title>
@@ -22,191 +21,173 @@
         <img draggable="false" src="./He_files/He.png">
       </div>
     </div>
-
-    <div class="body"> <!--暂停-->
-      <div class="content">
-        <div class="row">
-          <button onclick="play(event,'stop')">暂停</button>
-        </div>
-      </div>
-    </div>
-    <div class="body"> <!--木山车-->
+    <div class="body"> <!--He音盒-->
       <div style="position: relative;" class="title">
-        <p>木山车</p>
-        <b data-toggle="collapse" href="#z" style=
-        "font-size:small;
-        color:rgba(0, 0, 0, 0.215);
-        transform: translateY(65%);
-        position: absolute;
-        left: 50%;">点击展开/折叠
-        </b>
-        <button style=
-          "height: auto;
-          margin: 3px 0;
-          left: 80%;
-          position: absolute;
-          border-radius: 6px;"onclick="play(event,'stop')">暂停
+        <p>He音盒</p>
+        <a data-toggle="collapse" href="#Voice">点击展开/折叠
+        </a>
+        <button class="stop" onclick="play(event,'stop')">暂停
         </button>
       </div>
-      <div id="z" class="content collapse m-collapse">
-        <div class="row">
-          <button style="color:#c9ffe6" onclick="play(event,'Br4','z')">溴の4</button>
-          <button onclick="play(event,'Br4全','z')">溴の4小连招</button>
-          <button onclick="play(event,'Bye','z')">ByeBye</button>
+      <div id="Voice" class="collapse">
+        <div class="body mbody"> <!--木山车-->
+          <div style="position: relative;" class="title">
+            <p>木山车</p>
+            <a data-toggle="collapse" href="#z">点击展开/折叠
+            </a>
+            <button class="stop" onclick="play(event,'stop')">暂停
+            </button>
+          </div>
+          <div id="z" class="content collapse">
+            <div class="row">
+              <button style="color:#c9ffe6" onclick="play(event,'Br4','z')">溴の4</button>
+              <button onclick="play(event,'Br4全','z')">溴の4小连招</button>
+              <button onclick="play(event,'Bye','z')">ByeBye</button>
+            </div>
+            <div class="row">
+              <button style="color:#c9ffe6" onclick="play(event,'thanku1','z')">thanku</button>
+              <button style="color:#c9ffe6" onclick="play(event,'thanku2','z')">thanku</button>
+              <button style="color:#c9ffe6" onclick="play(event,'thanku3','z')">thanku</button>
+              <button onclick="play(event,'完全正确','z')">完全正确</button>
+            </div>
+            <div class="row">
+              <button onclick="play(event,'注意','z')">大家注意</button>
+              <button style="color:#c9ffe6" onclick="play(event,'小地方','z')">小地方</button>
+              <button onclick="play(event,'瓦特','z')">瓦特</button>
+              <button onclick="play(event,'思考','z')">得思考</button>
+              <button onclick="play(event,'笑掉小牙','z')">笑掉小牙</button>
+            </div>
+            <div class="row">
+              <button onclick="play(event,'种花高手','z')">种花高手</button>
+              <button style="color:#c9ffe6" onclick="play(event,'能理解了吗','z')">能理解了吗</button>
+              <button onclick="play(event,'出尔反尔','z')">出尔反尔</button>
+            </div>
+            <div class="row">
+              <button onclick="play(event,'学物理','z')">学物理</button>
+              <button onclick="play(event,'量子1','z')">量子理论</button>
+              <button onclick="play(event,'量子2','z')">量子理论</button>
+              <button onclick="play(event,'纯思维','z')">纯思维</button>
+            </div>
+            <div class="row">
+              <button onclick="play(event,'别笑','z')">同学们别笑</button>
+              <button onclick="play(event,'管不住','z')">管不住自己</button>
+              <button onclick="play(event,'没有事干','z')">没有事干</button>
+              <button style="color:#c9ffe6" onclick="play(event,'啥玩意','z')">啥玩意</button>
+            </div>
+            <div class="row">
+              <button onclick="play(event,'家长辛苦','z')">家长辛苦</button>
+              <button onclick="play(event,'点名表扬1','z')">点名表扬</button>
+              <button onclick="play(event,'点名表扬2','z')">点名表扬</button>
+            </div>
+            <div class="row">
+              <button onclick="play(event,'敬畏','z')">敬畏</button>
+              <button onclick="play(event,'不想学别学','z')">不想学别学</button>
+              <button onclick="play(event,'不尊重','z')">不尊重</button>
+            </div>
+            <div class="row">
+              <button onclick="play(event,'什么玩意','z')">什么玩意</button>
+              <button onclick="play(event,'英才','z')">英才</button>
+              <button onclick="play(event,'悲凉','z')">悲凉</button>
+            </div>
+          </div>
         </div>
-        <div class="row">
-          <button style="color:#c9ffe6" onclick="play(event,'thanku1','z')">thanku</button>
-          <button style="color:#c9ffe6" onclick="play(event,'thanku2','z')">thanku</button>
-          <button style="color:#c9ffe6" onclick="play(event,'thanku3','z')">thanku</button>
-          <button onclick="play(event,'完全正确','z')">完全正确</button>
+        <div class="body mbody"> <!--世说辛语-->
+          <div style="position: relative;" class="title">
+            <p>世说辛语</p>
+            <a data-toggle="collapse" href="#x">点击展开/折叠
+            </a>
+            <button class="stop" onclick="play(event,'stop')">暂停
+            </button>
+          </div>
+          <div id="x" class="content collapse">
+            <div class="row">
+              <button onclick="play(event,'最高指示','x')">最高指示</button>
+            </div>
+            <div class="row">
+              <button style="color:#c9ffe6" onclick="play(event,'有道理1','x')">有道理</button>
+              <button style="color:#c9ffe6" onclick="play(event,'有道理2','x')">有道理</button>
+              <button style="color:#c9ffe6" onclick="play(event,'打开课本','x')">打开课本</button>
+              <button onclick="play(event,'多少页1','x')">多少页</button>
+              <button onclick="play(event,'多少页2','x')">多少页</button>
+            </div>
+            <div class="row">
+              <button onclick="play(event,'看原文','x')">看原文</button>
+              <button onclick="play(event,'见原文','x')">见原文</button>
+              <button onclick="play(event,'课本上','x')">课本上</button>
+              <button onclick="play(event,'原文','x')">原文</button>
+              <button onclick="play(event,'带课本','x')">带课本</button>
+            </div>
+            <div class="row">
+              <button style="color:#c9ffe6" onclick="play(event,'少废话','x')">少废话</button>
+              <button onclick="play(event,'你看','x')">你看</button>
+              <button onclick="play(event,'行吧','x')">行吧</button>
+              <button onclick="play(event,'合适吧','x')">合适吧</button>
+              <button onclick="play(event,'对','x')">对</button>
+            </div>
+            <div class="row">
+              <button onclick="play(event,'搞明白','x')">搞明白</button>
+              <button onclick="play(event,'能理解吧','x')">能理解吧</button>
+              <button onclick="play(event,'挺简单','x')">挺简单</button>
+              <button onclick="play(event,'得会','x')">得会</button>
+            </div>
+            <div class="row">
+              <button onclick="play(event,'自我认识','x')">自我认识</button>
+              <button onclick="play(event,'炫耀','x')">炫耀</button>
+              <button onclick="play(event,'比书强','x')">比书强</button>
+            </div>
+            <div class="row">
+              <button onclick="play(event,'注意听','x')">注意听</button>
+              <button onclick="play(event,'快快快','x')">快快快</button>
+              <button onclick="play(event,'换言之','x')">换言之</button>
+              <button onclick="play(event,'不算','x')">不算</button>
+            </div>
+            <div class="row">
+              <button onclick="play(event,'打着玩','x')">打着玩</button>
+              <button onclick="play(event,'睡觉','x')">睡觉</button>
+              <button onclick="play(event,'没绕弯','x')">没绕弯</button>
+              <button onclick="play(event,'你猜','x')">你猜</button>
+            </div>
+            <div class="row">
+            </div>
+          </div>
         </div>
-        <div class="row">
-          <button onclick="play(event,'注意','z')">大家注意</button>
-          <button style="color:#c9ffe6" onclick="play(event,'小地方','z')">小地方</button>
-          <button onclick="play(event,'瓦特','z')">瓦特</button>
-          <button onclick="play(event,'思考','z')">得思考</button>
-          <button onclick="play(event,'笑掉小牙','z')">笑掉小牙</button>
-        </div>
-        <div class="row">
-          <button onclick="play(event,'种花高手','z')">种花高手</button>
-          <button style="color:#c9ffe6" onclick="play(event,'能理解了吗','z')">能理解了吗</button>
-          <button onclick="play(event,'出尔反尔','z')">出尔反尔</button>
-        </div>
-        <div class="row">
-          <button onclick="play(event,'学物理','z')">学物理</button>
-          <button onclick="play(event,'量子1','z')">量子理论</button>
-          <button onclick="play(event,'量子2','z')">量子理论</button>
-          <button onclick="play(event,'纯思维','z')">纯思维</button>
-        </div>
-        <div class="row">
-          <button onclick="play(event,'别笑','z')">同学们别笑</button>
-          <button onclick="play(event,'管不住','z')">管不住自己</button>
-          <button onclick="play(event,'没有事干','z')">没有事干</button>
-          <button style="color:#c9ffe6" onclick="play(event,'啥玩意','z')">啥玩意</button>
-        </div>
-        <div class="row">
-          <button onclick="play(event,'家长辛苦','z')">家长辛苦</button>
-          <button onclick="play(event,'点名表扬1','z')">点名表扬</button>
-          <button onclick="play(event,'点名表扬2','z')">点名表扬</button>
-        </div>
-        <div class="row">
-          <button onclick="play(event,'敬畏','z')">敬畏</button>
-          <button onclick="play(event,'不想学别学','z')">不想学别学</button>
-          <button onclick="play(event,'不尊重','z')">不尊重</button>
-        </div>
-        <div class="row">
-          <button onclick="play(event,'什么玩意','z')">什么玩意</button>
-          <button onclick="play(event,'英才','z')">英才</button>
-          <button onclick="play(event,'悲凉','z')">悲凉</button>
+        <div class="body mbody"> <!--test-->
+          <div class="title">
+            <p>test(音量注意)<button class="stop" onclick="play(event,'stop')">暂停</button></p>
+              <a data-toggle="collapse" href="#t">点击展开/折叠
+              </a>
+          </div>
+          <div id="t" class="content collapse">
+            <div class="row">
+              <button onclick="play(event,'1')">1</button>
+              <button onclick="play(event,'2')">2</button>
+              <button onclick="play(event,'3')">3</button>
+              <button onclick="play(event,'4')">4</button>
+              <button onclick="play(event,'5')">5</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="body"> <!--世说辛语-->
-      <div style="position: relative;" class="title">
-        <p>世说辛语</p>
-        <b data-toggle="collapse" href="#x" style=
-        "font-size:small;
-        color:rgba(0, 0, 0, 0.215);
-        transform: translateY(65%);
-        position: absolute;
-        left: 50%;">点击展开/折叠
-        </b>
-        <button style=
-          "height: auto;
-          margin: 3px 0;
-          left: 80%;
-          position: absolute;
-          border-radius: 6px;"onclick="play(event,'stop')">暂停
-        </button>
-      </div>
-      <div id="x" class="content collapse">
-        <div class="row">
-          <button onclick="play(event,'最高指示','x')">最高指示</button>
+    <div class="body">
+      <div class="title">video test</div>
+      <div class="body mbody">
+        <div class="title">大家好
+        <a data-toggle="collapse" href="#大家好">点击展开/折叠</a>
         </div>
-        <div class="row">
-          <button style="color:#c9ffe6" onclick="play(event,'有道理1','x')">有道理</button>
-          <button style="color:#c9ffe6" onclick="play(event,'有道理2','x')">有道理</button>
-          <button style="color:#c9ffe6" onclick="play(event,'打开课本','x')">打开课本</button>
-          <button onclick="play(event,'多少页1','x')">多少页</button>
-          <button onclick="play(event,'多少页2','x')">多少页</button>
-        </div>
-        <div class="row">
-          <button onclick="play(event,'看原文','x')">看原文</button>
-          <button onclick="play(event,'见原文','x')">见原文</button>
-          <button onclick="play(event,'课本上','x')">课本上</button>
-          <button onclick="play(event,'原文','x')">原文</button>
-          <button onclick="play(event,'带课本','x')">带课本</button>
-        </div>
-        <div class="row">
-          <button style="color:#c9ffe6" onclick="play(event,'少废话','x')">少废话</button>
-          <button onclick="play(event,'你看','x')">你看</button>
-          <button onclick="play(event,'行吧','x')">行吧</button>
-          <button onclick="play(event,'合适吧','x')">合适吧</button>
-          <button onclick="play(event,'对','x')">对</button>
-        </div>
-        <div class="row">
-          <button onclick="play(event,'搞明白','x')">搞明白</button>
-          <button onclick="play(event,'能理解吧','x')">能理解吧</button>
-          <button onclick="play(event,'挺简单','x')">挺简单</button>
-          <button onclick="play(event,'得会','x')">得会</button>
-        </div>
-        <div class="row">
-          <button onclick="play(event,'自我认识','x')">自我认识</button>
-          <button onclick="play(event,'炫耀','x')">炫耀</button>
-          <button onclick="play(event,'比书强','x')">比书强</button>
-        </div>
-        <div class="row">
-          <button onclick="play(event,'注意听','x')">注意听</button>
-          <button onclick="play(event,'快快快','x')">快快快</button>
-          <button onclick="play(event,'换言之','x')">换言之</button>
-          <button onclick="play(event,'不算','x')">不算</button>
-        </div>
-        <div class="row">
-          <button onclick="play(event,'打着玩','x')">打着玩</button>
-          <button onclick="play(event,'睡觉','x')">睡觉</button>
-          <button onclick="play(event,'没绕弯','x')">没绕弯</button>
-          <button onclick="play(event,'你猜','x')">你猜</button>
-        </div>
-        <div class="row">
-        </div>
-      </div>
-    </div>
-    <div class="body"> <!--test-->
-      <div class="title">
-        <p>test(音量注意)<button style=
-          "height: auto;
-          left: 80%;
-          position: absolute;
-          border-radius: 6px;"
-          onclick="play(event,'stop')">暂停</button></p>
-          <b data-toggle="collapse" href="#t" style=
-          "font-size:small;
-          color:rgba(0, 0, 0, 0.215);
-          transform: translateY(65%);
-          position: absolute;
-          left: 50%;">点击展开/折叠
-          </b>
-      </div>
-      <div id="t" class="content collapse">
-        <div class="row">
-          <button onclick="play(event,'1')">1</button>
-          <button onclick="play(event,'2')">2</button>
-          <button onclick="play(event,'3')">3</button>
-          <button onclick="play(event,'4')">4</button>
-          <button onclick="play(event,'5')">5</button>
-        </div>
+        <video width="100%" controls class="collapse" id="大家好"><source src="./videos/1.mp4"></video>
       </div>
     </div>
     <div class="about"> <!--关于-->
       <div style="font-size: 20px; font-weight: bold;display: flex;">
         <p>关于</p>
-        <b data-toggle="collapse" href="#about" style=
+        <a data-toggle="collapse" href="#about" style=
         "font-size:small;
         color:rgba(0, 0, 0, 0.215);
         transform: translateY(65%);
         position: absolute;
         left: 60%;">点击展开/折叠
-        </b>
+        </a>
       </div>
       <div id="about" class="content collapse">
         <p>本网站由网友制作的<a href="https://rarebox.page.dev/">罕见盒</a>修改而来，正在编辑中……</p>
@@ -215,13 +196,13 @@
     <div class="about"> <!--更新日志-->
       <div style="font-size: 20px; font-weight: bold;display: flex;">
         <p>更新历史</p>
-        <b data-toggle="collapse" href="#dev" style=
+        <a data-toggle="collapse" href="#dev" style=
         "font-size:small;
         color:rgba(0, 0, 0, 0.215);
         transform: translateY(65%);
         position: absolute;
         left: 60%;">点击展开/折叠
-        </b>
+        </a>
       </div>
       <div style="font-size: 14px;color: rgb(128, 128, 128)" id="dev" class="collapse">
           <p>24/1/17&emsp;开始施工</p>
