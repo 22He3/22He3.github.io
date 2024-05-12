@@ -16,9 +16,11 @@ async function play(e,name,dir) {
 };
 
 function stopvideo() {
-  var video = document.getElementsByTagName('video')[0];
-  video.pause();
-  video.currentTime = 0;
+  var allvideo = document.getElementsByTagName('video')
+  for (let video of allvideo) {
+    video.pause();
+    video.currentTime = 0;
+  }
 }
 
 function createRipple(event) {
