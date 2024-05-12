@@ -9,13 +9,14 @@ async function play(e,name,dir) {
   if (name == "stop"){
     stopAllAudio()
   }
+  else if (name == undefined){}
   else {
     const buffer = await getBuffer(dir + name + ".mp3");
     currentSource = playAudio(buffer);
   }
 };
 
-function stopvideo() {
+function stopvideo() { //关闭模态框时重置视频
   var allvideo = document.getElementsByTagName('video')
   for (let video of allvideo) {
     video.pause();
@@ -104,6 +105,29 @@ const playAudio = function (buffer) {
     }
   }, 100);*/
 };
+
+function Chongyue(event,accent) {
+  if(accent == 0 | accent == undefined) {
+    rand = parseInt(Math.random()*15+1);
+    if(rand <= 4) {
+      play(event,rand,'Chongyue');
+      stopAllAudio()
+    }
+    else {
+      play(event)
+    }
+  }
+  else {
+    rand = parseInt(Math.random()*15+101);
+    if(rand <= 104) {
+      play(event,rand,'Chongyue');
+      stopAllAudio()
+    }
+    else {
+      play(event)
+    }
+  }
+}
 
 function stopAllAudio() {
   activeSources.forEach(source => {
