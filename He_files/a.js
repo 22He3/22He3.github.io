@@ -13,8 +13,14 @@ async function play(e,name,dir) {
     const buffer = await getBuffer(dir + name + ".mp3");
     currentSource = playAudio(buffer);
   }
-  
 };
+
+function stopvideo() {
+  var video = document.getElementsByTagName('video')[0];
+  video.pause();
+  video.currentTime = 0;
+}
+
 function createRipple(event) {
   const button = event.currentTarget;
   const circle = document.createElement("div");
@@ -48,33 +54,7 @@ function createRipple(event) {
   setTimeout(() => circle.remove(), 1000);
 }
 
-let activeSources = [];
-
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-const audioContext = new AudioContext();
-const playAudio = function (buffer) {
-  const source = audioContext.createBufferSource();
-  source.buffer = buffer;
-  source.connect(audioContext.destination);
-  source.onended = function() {
-    // 当音频播放结束时，从数组中移除source对象
-    const index = activeSources.indexOf(source);
-    if (index > -1) {
-      activeSources.splice(index, 1);
-    }
-  };
-  source.start();
-  activeSources.push(source); // 将此source对象添加到跟踪数组中
-};
-
 let currentSource = null;
-
-function stopAllAudio() {
-  activeSources.forEach(source => {
-    source.stop(); // 停止每个音频源
-  });
-  activeSources = []; // 清空数组，因为所有的音频都已停止
-}
 
 const getBuffer = function (url) {
   const request = new XMLHttpRequest();
@@ -91,16 +71,55 @@ const getBuffer = function (url) {
   });
 };
 
-var ottocount = 1;
-function otto(event) {
+let activeSources = [];
+
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioContext = new AudioContext();
+const playAudio = function (buffer) {
+  const source = audioContext.createBufferSource();
+  source.buffer = buffer;
+  source.connect(audioContext.destination);
+  source.start();
+  activeSources.push(source); // 将此source对象添加到跟踪数组中
+  source.onended = function() {
+    // 当音频播放结束时，从数组中移除source对象
+    const index = activeSources.indexOf(source);
+    if (index > -1) {
+      activeSources.splice(index, 1);
+    }
+    source.stop();
+  };
+  /*未实现的进度条功能
+  var timerId = setInterval(function() {
+    var currentTime = audioContext.currentTime
+    var duration = source.buffer.duration;
+    var progress = (currentTime / duration) * 100;
+    var progressBar = document.getElementById("progress");
+    progressBar.style.width = progress + "%";
+    console.log("当前播放进度：" + progress.toFixed(2) + "%");
+    if (progress > 100) {
+      clearInterval(timerId)
+    }
+  }, 100);*/
+};
+
+function stopAllAudio() {
+  activeSources.forEach(source => {
+    source.stop(); // 停止每个音频源
+  });
+  activeSources = []; // 清空数组，因为所有的音频都已停止
+}
+
+var eggcount = 0;
+function egg(event) {
   let kj = event.currentTarget;
-  if (ottocount == 5) {
-    play(event, "otto");
+  eggcount++;
+  if (eggcount%5 == 0) {
+    play(event, "egg");
   }
   kj.classList.add("shaky");
-    setTimeout(function () {
-      kj.classList.remove("shaky");
-    }, 500);
-    ottocount++;
+  setTimeout(function () {
+    kj.classList.remove("shaky");
+  }, 500);
 }
 //Qmsg.info()

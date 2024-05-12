@@ -4,11 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>He音盒</title>
     <meta name="Description" content="He音盒">
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-	  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
     <link rel="stylesheet" href="./He_files/message.min.css">
     <link rel="stylesheet" href="./He_files/a.css">
+    <!-- 新 Bootstrap5 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.net/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <!--  popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.net/popper.js/2.9.3/umd/popper.min.js"></script>
+    <!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.net/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
     <!--<script src="message.min.js" defer></script>-->
     <script src="./He_files/a.js"></script>
     <script async="" src="./He_files/busuanzi.pure.mini.js"></script>
@@ -16,27 +22,26 @@
   </head>
   <body>
     <div id="head">
-      <p id="heading">He音盒</p>
-      <div onclick="otto(event)" id="cover">
+      <p id="heading">³Heの小屋</p>
+      <div onclick="egg(event)" id="cover">
         <img draggable="false" src="./He_files/He.png">
       </div>
     </div>
     <div class="body"> <!--He音盒-->
-      <div style="position: relative;" class="title">
-        <p>He音盒</p>
-        <a data-toggle="collapse" href="#Voice">点击展开/折叠
+      <!--<div class="progress">未实现的进度条功能
+        <div class="progress-bar" id="progress" style="width:0%"></div>
+      </div>-->
+      <div class="title">He音盒
+        <a data-bs-toggle="collapse" href="#Voice">点击展开/折叠
         </a>
         <button class="stop" onclick="play(event,'stop')">暂停
         </button>
       </div>
-      <div id="Voice" class="collapse">
+      <div id="Voice" class="collapse show">
         <div class="body mbody"> <!--木山车-->
-          <div style="position: relative;" class="title">
-            <p>木山车</p>
-            <a data-toggle="collapse" href="#z">点击展开/折叠
-            </a>
-            <button class="stop" onclick="play(event,'stop')">暂停
-            </button>
+          <div class="title">木山车
+            <a data-bs-toggle="collapse" href="#z">点击展开/折叠</a>
+            <button class="stop" onclick="play(event,'stop')">暂停</button>
           </div>
           <div id="z" class="content collapse">
             <div class="row">
@@ -92,12 +97,9 @@
           </div>
         </div>
         <div class="body mbody"> <!--世说辛语-->
-          <div style="position: relative;" class="title">
-            <p>世说辛语</p>
-            <a data-toggle="collapse" href="#x">点击展开/折叠
-            </a>
-            <button class="stop" onclick="play(event,'stop')">暂停
-            </button>
+          <div class="title">世说辛语
+            <a data-bs-toggle="collapse" href="#x">点击展开/折叠</a>
+            <button class="stop" onclick="play(event,'stop')">暂停</button>
           </div>
           <div id="x" class="content collapse">
             <div class="row">
@@ -152,10 +154,9 @@
           </div>
         </div>
         <div class="body mbody"> <!--test-->
-          <div class="title">
-            <p>test(音量注意)<button class="stop" onclick="play(event,'stop')">暂停</button></p>
-              <a data-toggle="collapse" href="#t">点击展开/折叠
-              </a>
+          <div class="title">test(音量注意)
+              <button class="stop" onclick="play(event,'stop')">暂停</button>
+              <a data-bs-toggle="collapse" href="#t">点击展开/折叠</a>
           </div>
           <div id="t" class="content collapse">
             <div class="row">
@@ -171,28 +172,57 @@
     </div>
     <div class="body"> <!--视频-->
       <div class="title">video test
-        <a data-toggle="collapse" href="#Video">点击展开/折叠
+        <a data-bs-toggle="collapse" href="#Video">点击展开/折叠
         </a>
       </div>
-      <div class="collapse" id="Video">
-        <div class="body mbody">
-          <div class="title">大家好
-          <a data-toggle="collapse" href="#大家好">点击展开/折叠</a>
+      <div class="collapse show" id="Video">
+        <div class="content">
+          <div class="row">
+            <button data-bs-toggle="modal" data-bs-target="#大家好">大家好</button>
+            <button data-bs-toggle="modal" data-bs-target="#恭喜发财">恭喜发财</button>
           </div>
-          <video width="100%" controls class="collapse" id="大家好"><source src="./videos/1.mp4"></video>
         </div>
-        <div class="body mbody">
-          <div class="title">恭喜发财
-            <a data-toggle="collapse" href="#恭喜发财">点击展开/折叠</a>
+      </div>
+      <div class="modal" id="大家好" data-bs-backdrop="static">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">大家好</h4>
+              <button type="button" class="btn-close" data-bs-dismiss='modal' onclick="stopvideo()"></button>
+            </div>
+            <!-- 模态框内容 -->
+            <div class="modal-body">
+              <video width="100%" controls preload="metadata" src="./videos/1.mp4" id="大家好v"></video>
+            </div>
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss='modal' onclick="stopvideo()">关闭</button>
+            </div>
           </div>
-          <video width="100%" controls class="collapse" id="恭喜发财"><source src="./videos/恭喜发财讲题版.mp4"></video>
+        </div>
+      </div>
+      <div class="modal" id="恭喜发财" data-bs-backdrop="static">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">恭喜发财</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="stopvideo()"></button>
+            </div>
+            <!-- 模态框内容 -->
+            <div class="modal-body">
+              <video width="100%" controls preload="metadata" src="./videos/恭喜发财讲题版.mp4"></video>
+            </div>
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="stopvideo()">关闭</button>
+            </div>
           </div>
+        </div>
       </div>
     </div>
     <div class="about"> <!--关于-->
-      <div style="font-size: 20px; font-weight: bold;display: flex;">
-        <p>关于</p>
-        <a data-toggle="collapse" href="#about" style=
+      <div class="title">关于
+        <a data-bs-toggle="collapse" href="#about" style=
         "font-size:small;
         color:rgba(0, 0, 0, 0.215);
         transform: translateY(65%);
@@ -201,13 +231,13 @@
         </a>
       </div>
       <div id="about" class="content collapse">
+        <br>
         <p>本网站由网友制作的<a href="https://rarebox.page.dev/">罕见盒</a>修改而来，正在编辑中……</p>
       </div>
     </div>
-    <div class="about"> <!--更新日志-->
-      <div style="font-size: 20px; font-weight: bold;display: flex;">
-        <p>更新历史</p>
-        <a data-toggle="collapse" href="#dev" style=
+    <div class="body"> <!--更新日志-->
+      <div class="title">更新历史
+        <a data-bs-toggle="collapse" href="#dev" style=
         "font-size:small;
         color:rgba(0, 0, 0, 0.215);
         transform: translateY(65%);
@@ -216,11 +246,15 @@
         </a>
       </div>
       <div style="font-size: 14px;color: rgb(128, 128, 128)" id="dev" class="collapse">
+          <br>
           <p>24/1/17&emsp;开始施工</p>
           <p>24/2/1&emsp;&ensp;实现了暂停功能</p>
           <p>24/2/3&emsp;&ensp;更新了“木山车”语音集</p>
           <p>24/2/4&emsp;&ensp;更新了“世说辛语”语音集，改善了页面布局</p>
           <p>24/2/5&emsp;&ensp;实现了折叠功能，改善了页面布局</p>
+          <p>24/5/8&emsp;&ensp;加入了视频模块，与He音盒模块并列，调整了页面布局</p>
+          <p>24/5/11&emsp;&ensp;更名为³Heの小屋，更新了bootstrap插件，优化了代码及页面布局</p>
+          <p>24/5/12&emsp;&ensp;修改了视频模块的实现方式</p>
       </div>
     </div>
   <!-- Cloudflare pages Analytics --><script defer="" src="./He_files/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;db5b6d0335ff4ce4979a881b2b742d71&quot;}"></script><!-- Cloudflare pages Analytics -->
